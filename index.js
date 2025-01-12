@@ -1,12 +1,16 @@
 let firstCard = 7;
 let secondCard = 9;
-
 let sum = firstCard + secondCard;
+let hasBlackJack = false;
+let isAlive = true;
+let message = "";
 
 if (sum < 21) {
-    console.log("Do you want to draw a new card?")
+    message = "Hit or stick?";
 } else if (sum === 21) {
-    console.log("Congratulations! You've got blackjack")
+    message = "Congratulations! You've got blackjack";
+    hasBlackJack = true;
 } else {
-    console.log("Unlucky you've bust!")
+    message = "Unlucky you've bust!";
+    isAlive = false;
 }
