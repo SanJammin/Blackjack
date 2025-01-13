@@ -5,8 +5,10 @@ let hasBlackJack = false;
 let isAlive = true;
 let message = "";
 let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
 
 function startGame() {
+    sumEl.textContent += firstCard + secondCard;
     if (sum < 21) {
         message = "Hit or stick?";
     } else if (sum === 21) {
