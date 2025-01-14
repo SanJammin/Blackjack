@@ -4,8 +4,8 @@ let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
-let messageEl = document.querySelector("#message-el");
-let sumEl = document.querySelector("#sum-el");
+let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
 
 function startGame() {
     sumEl.textContent += firstCard + secondCard;
