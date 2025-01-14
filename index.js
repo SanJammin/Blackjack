@@ -9,7 +9,7 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
-    cardsEl = "Cards: " + firstCard + " " + secondCard;
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
     sumEl.textContent = "Sum: " + sum;
     if (sum < 21) {
         message = "Hit or stick?";
@@ -25,5 +25,7 @@ function startGame() {
 }
 
 function newCard() {
-    
+    let newCard = 4;
+    sum += newCard;
+    startGame();
 }
