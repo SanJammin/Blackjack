@@ -9,6 +9,10 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function startGame() {
+    renderGame();
+}
+
+function renderGame() {
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
     sumEl.textContent = "Sum: " + sum;
     if (sum < 21) {
@@ -17,7 +21,7 @@ function startGame() {
         message = "Congratulations! You've got blackjack";
         hasBlackJack = true;
     } else {
-        message = "Unlucky you've bust!";
+        message = "Unlucky, you've bust!";
         isAlive = false;
     }
 
@@ -27,5 +31,5 @@ function startGame() {
 function newCard() {
     let newCard = 4;
     sum += newCard;
-    startGame();
+    renderGame();
 }
