@@ -10,7 +10,15 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
 function getRandomCard() {
-    return Math.floor(Math.random()*13) + 1;
+    // change this to let the player pick 1 or 11 when receiving an Ace
+    let drawCard = Math.floor(Math.random()*13) + 1;
+    if (drawCard === 1) {
+        drawCard = 11;
+    } else if (drawCard > 10) {
+        drawCard = 10;
+    }
+
+    return drawCard;
 }
 
 function startGame() {
