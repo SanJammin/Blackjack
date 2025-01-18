@@ -6,6 +6,14 @@ let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
+let playerEl = document.getElementById("player-el");
+
+let player = {
+    name: "User",
+    chips: 145
+}
+
+playerEl.textContent = player.name + ": £" + player.chips;
 
 function getRandomCard() {
     // change this to let the player pick 1 or 11 when receiving an Ace
