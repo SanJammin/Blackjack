@@ -1,3 +1,10 @@
+// Create a way to allow in game betting and edit their name
+let player = {
+    name: "User",
+    chips: 145
+}
+
+// Create a deck that cards can be drawn from
 let cards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -8,15 +15,10 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let playerEl = document.getElementById("player-el");
 
-let player = {
-    name: "User",
-    chips: 145
-}
-
 playerEl.textContent = player.name + ": £" + player.chips;
 
 function getRandomCard() {
-    // change this to let the player pick 1 or 11 when receiving an Ace
+    // Change this to let the player pick 1 or 11 when receiving an Ace
     let drawCard = Math.floor(Math.random()*13) + 1;
     if (drawCard === 1) {
         drawCard = 11;
@@ -56,6 +58,7 @@ function renderGame() {
     messageEl.textContent = message;
 }
 
+// When pulling a new card, make it so the card is removed from the deck until a new game starts
 function newCard() {
     if (isAlive === true && hasBlackJack === false) {
         let newCard = getRandomCard;
